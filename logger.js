@@ -1,10 +1,10 @@
-function add(n1,n2){
-    return n1+n2;
-};
+// function add(n1,n2){
+//     return n1+n2;
+// };
 
-function multiply(n1,n2){
-    return n1*n2;
-};
+// function multiply(n1,n2){
+//     return n1*n2;
+// };
 
 
 // default exports
@@ -15,9 +15,24 @@ function multiply(n1,n2){
 
 
 //best way
-module.exports={
-    add,
-    multiply,
-};
+// module.exports={
+//     add,
+//     multiply,
+// };
 
 // N ode--> modular programing we can export by module in 
+
+class Log{
+   constructor(name){
+    this.name=name;
+   }
+   display(){
+    console.log(`this is log--  ${this.name}`);
+   }
+}
+const log=new Log('vasant');
+log.display();
+
+module.exports={
+    log
+}
